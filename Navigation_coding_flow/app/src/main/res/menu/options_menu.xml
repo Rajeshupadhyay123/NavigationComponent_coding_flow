@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/termsAndCondition"
+        android:title="Terms &amp; Conditions"
+        app:showAsAction="never"/>
+
+    <!--
+        If we wan to move the setting according to the navigation graph then the
+        id of the setting will always be same as the navigation graph setting fragment
+        otherwise it will not work. because 'item.onNavDestinationSelected(navController)'
+        define in the 'onOptionsItemSelected(item: MenuItem)' in mainactivity class, will
+        not identatify these. it only works based on the id, if the id is same as the fragment
+        class then will navigate otherwise ignore them.
+    -->
+    <item
+        android:id="@+id/settingsFragment"
+        android:title="Setting"
+        android:menuCategory="secondary"
+        app:showAsAction="never"/>
+</menu>
